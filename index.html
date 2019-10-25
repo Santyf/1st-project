@@ -10,26 +10,71 @@
     <link rel="stylesheet" href="assets/reset.css">
     <link rel="stylesheet" href="assets/style.css">
 
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <script src="https://kit.fontawesome.com/a5a0fef831.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
-                <div class="jumbotron jumbotron-fluid">
-                    <div class="container header">
-                        <h1 class="display-4">Dog Finder Web App</h1>
-                        <p class="lead">Welcome to Dog Finder!<br>You're moments away from finding your best friend!</p>
+    <div class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="jumbotron jumbotron-fluid">
+                        <div class="container header">
+                            <h1 class="display-4">Dog Finder Web App</h1>
+                            <p class="lead">Welcome to Dog Finder!<br>You're moments away from finding your best friend!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="searchContainer">
+                        <h2>
+                            <i class="fas fa-paw"></i>
+                            <span>Search by Dog Breed</span>
+                        </h2>
+                        <form>
+                            <div class="form-group searchBar">
+                                <input type="email" class="form-control" id="userInput" placeholder="TYPE DOG BREED">
+                                <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm">
+                    <div class="footer">
+                        <p>
+                            <small>Copyright &copy; 2019 Group-Name. All rights reserved.</small>
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+                    <div class="results">
+                        <div class="imgContainer"></div>
+                        <div class="breedInfo"></div>
+                        <div class="btnContainer">
+                            <button class="btn btn-primary" id="listSellersBtn">Find Sellers</button>
+                            <button class="btn btn-primary" id="listSellersBtn">Adoption</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+    </script>
     <script src="assets/app.js">
 
     </script>
