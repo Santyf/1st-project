@@ -1,3 +1,31 @@
-.header {
+.header,
+.footer,
+h2 {
 	text-align: center;
+}
+
+.fa-paw {
+	padding: 0 1rem;
+}
+
+.searchBar {
+	display: flex;
+}
+
+.content {
+	display: none;
+}
+
+.main {
+	/* display: none; */
+}
+
+.results {
+
+}
+
+.imgContainer {
+	background-color: lightgray;
+	height: 300px;
+	width: 300px;
 }
