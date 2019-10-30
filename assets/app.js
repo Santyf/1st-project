@@ -2,10 +2,11 @@
     
 $("#submit-button").on("click", function() {
 	event.preventDefault()
-	$(".mainSearch").hide();
+	// $(".mainSearch").hide();
 	var userInput = $("#userInput").val().trim();
 	console.log(userInput);
 	call(userInput);
+	info();
 
 });
 
@@ -22,13 +23,12 @@ function call(userInput) {
 
 
 		$(".content").show();
-		// $(".imgContainer").text(response.message[5])
+		
 
-		// 1: first build the image as you want it
-		var dogImg = $('img'); // creates the "img" element using jquery
-								// <img>
+	
+		var dogImg = $('img');
+								
 		dogImg.attr("src", response.message)
-		// 2: append images to the target
 		$(".imgContainer").append(dogImg)
 
 
@@ -36,4 +36,18 @@ function call(userInput) {
 	})	
 };
 
+function info() {
 
+	$.ajax({
+		url: "https://enigmatic-beyond-33445.herokuapp.com/cors",
+		method:"POST",
+		data: {
+			url: "hhttps://thedogapi.com/v1./breed_id/" + userInput + "/?api_key=15528f27-5320-4277-84ae-f1b588dee2b6",
+			method: "GET",
+			key: "6a00bee3031c82ad63a1aae5555a6e3b",
+		}
+	}).then(function (response){
+		console.log(response)
+	})
+
+};
