@@ -1,15 +1,46 @@
+body {
+	font-family: 'Fredoka One', cursive !important;
+	background: url(images/paw.png);
+}
+
+.jumbotron {
+	background-color: white !important;
+	border-radius: 1rem !important;
+	background-color: deepskyblue !important;
+	margin: 1rem 0;
+	color: darkslategray;
+}
+
 .header,
 .footer,
 h2 {
 	text-align: center;
 }
+.footerContainer {
+	position: relative;
 
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
 .fa-paw {
+	color: deepskyblue;
 	padding: 0 1rem;
+}
+.searchContainer {
+	border-radius: 1rem;
+	background-color: white;
 }
 
 .searchBar {
 	display: flex;
+}
+
+#userInput {
+	padding: 1rem;
+	margin: 0 1rem 0 0;
 }
 
 .content {
@@ -25,7 +56,7 @@ h2 {
 }
 
 .imgContainer {
-	/* background-color: lightgray; */
-	height: 300px;
-	width: 300px;
+	height: auto;
+	width: auto;
+	/* padding: 1rem; */
 }
