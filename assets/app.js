@@ -3,13 +3,13 @@ var userInput
 $("#submit-button").on("click", function () {
 	$(".dogInfo").empty();
 	event.preventDefault();
-	// $(".mainSearch").hide();
 	userInput = $("#userInput").val().trim();
 	console.log(userInput);
 	var userInputsplit = split(userInput)
 	call(userInputsplit);
 	info();
-
+	
+	
 
 });
 
@@ -19,24 +19,18 @@ function call(userInputsplit) {
 		method: "GET"
 	}).then(function (response) {
 		console.log(response.message[0])
-		// console.log (response[5].message[0]) // dog breed "hound"
-
 		
+	$(".content").show();
 
-
-
-
-		$(".content").show();
-
-
-
-		var dogImg = $('img');
+	var dogImg = $('img');
 
 		dogImg.attr("src", response.message)
 		$(".imgContainer").append(dogImg)
+		
 
-
-		console.log(response);
+	console.log(response);
+	}, err => {
+		$('#myModal').modal('show');
 	})
 };
 
@@ -44,13 +38,13 @@ function split(userVariable) {
 	var str = userVariable
 	var res = str.split(" ");
 	if (res.length > 1) {
-	var newString = res[1] + "/" + res[0];
-	console.log(newString);
-	return newString
+		var newString = res[1] + "/" + res[0];
+		console.log(newString);
+		return newString
 	}
-	 else {
-		 return userVariable
-	 }
+	else {
+		return userVariable
+	}
 }
 
 
@@ -68,14 +62,14 @@ function info() {
 		console.log(response)
 		console.log(userInput)
 		for (var i = 0; i < response.length; i++) {
-		
+
 
 			if (userInput.toLowerCase() === response[i].name.toLowerCase()) {
 				console.log(response[i]);
 
 				var infoDiv = $("<div>")
 				infoDiv.addClass('dogInfo');
-				var breedName = $("<p>").text("Name: " +  response[i].name);
+				var breedName = $("<p>").text("Name: " + response[i].name);
 				var breedInfo = $("<p>").text("Bred For: " + response[i].bred_for)
 				var breedGroup = $("<p>").text("Breed Group: " + response[i].breed_group)
 				var breedHeight = $("<p>").text("Height: " + response[i].height.imperial + " in")
@@ -93,7 +87,8 @@ function info() {
 				$(".imgContainer").append(infoDiv);
 
 
-				
+
+
 
 			}
 
@@ -105,3 +100,9 @@ function info() {
 	})
 
 };
+
+
+
+
+
+
