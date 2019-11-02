@@ -8,8 +8,8 @@ $("#submit-button").on("click", function () {
 	var userInputsplit = split(userInput)
 	call(userInputsplit);
 	info();
-	
-	
+
+
 
 });
 
@@ -19,16 +19,16 @@ function call(userInputsplit) {
 		method: "GET"
 	}).then(function (response) {
 		console.log(response.message[0])
-		
-	$(".content").show();
 
-	var dogImg = $('img');
+		$(".content").show();
+
+		var dogImg = $('img');
 
 		dogImg.attr("src", response.message)
 		$(".imgContainer").append(dogImg)
-		
 
-	console.log(response);
+
+		console.log(response);
 	}, err => {
 		$('#myModal').modal('show');
 	})
@@ -84,7 +84,7 @@ function info() {
 				infoDiv.append(temperament);
 
 
-				$(".imgContainer").append(infoDiv);
+				$(".dogInfo").append(infoDiv);
 
 
 
