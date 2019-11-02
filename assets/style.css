@@ -29,3 +29,12 @@ h2 {
 	height: 300px;
 	width: 300px;
 }
+
+/* #modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	overflow: auto;
+	width: 20%;
+	height: 20%;
+} */
