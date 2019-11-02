@@ -1,40 +1,134 @@
+html > body {
+	font-family: 'Fredoka One', cursive !important;
+	background: url(images/paw.png);
+}
+
+.col-sm > .jumbotron {
+	background-color: deepskyblue;
+	margin: 1rem 0;
+	color: darkslategray;
+}
+
+.contentContainer {
+	background-color: white;
+	padding: 2rem 1rem;
+}
+
+.searchContainer > h2 {
+	font-size: 1.5rem;
+}
+
+.col-sm > .jumbotron,
+.contentContainer {
+	border: 1px solid lightgray;
+	border-radius: 1rem;
+	box-shadow: 0 5px 5px 0 rgba(0,0,0,0.3);
+}
+
 .header,
-.footer,
-h2 {
+footer {
 	text-align: center;
 }
 
 .fa-paw {
+	color: deepskyblue;
 	padding: 0 1rem;
+}
+.searchContainer {
+	border-radius: 1rem;
+	background-color: white;
 }
 
 .searchBar {
 	display: flex;
 }
 
-.content {
-	display: none;
+#userInput {
+	padding: 1rem;
+	margin: 0 1rem 0 0;
 }
 
-.main {
-	/* display: none; */
-}
-
-.results {
+.footerContainer {
+	position: relative;
 
 }
 
-.imgContainer {
-	/* background-color: lightgray; */
-	height: 300px;
-	width: 300px;
-}
-
-/* #modal {
-	display: none;
+footer {
 	position: fixed;
-	z-index: 1;
-	overflow: auto;
-	width: 20%;
-	height: 20%;
-} */
+	bottom: 0;
+	width: 100%;
+}
+
+.infoContainer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: auto;
+	grid-template-areas: 
+	"image info";
+}
+
+.imgBox {
+	grid-area: image;
+}
+
+.dogInfo {
+	grid-area: info;
+}
+
+.preview:target,
+.preview .close {
+  display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.preview:target {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.preview .close {
+  color: white;
+  cursor: pointer;
+  font-size: 25px;
+  position: fixed;
+  text-align: center;
+  text-decoration: none;
+  line-height: initial;
+  padding: 15px;
+}
+
+.preview img {
+  max-width: 688px;
+  width: 100%;
+}
+
+.preview .close:hover,
+.preview .close:active {
+  color: white;
+  background-color: deepskyblue;
+}
+
+.preview .prev {
+  top: calc(50% - 1em);
+	left: 0;
+}
+
+.preview .next {
+  top: calc(50% - 1em);
+  right: 0;
+}
+
+.preview .close {
+  top: 0;
+  right: 0;
+}
+		
+.preview {
+	display: none;
+}

@@ -5,112 +5,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title></title>
+    <title>Doggie Finder</title>
 
     <link rel="stylesheet" href="assets/reset.css">
+
     <link rel="stylesheet" href="assets/style.css">
 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/a5a0fef831.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-
- 
-
-              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Not a breed</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Not a breed</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
-                      </button>
-                    </div>
-                    <div class="modal-body">
-                      Breed Unavailable
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      
-                    </div>
-                  </div>
+                    </button>
                 </div>
-              </div>
+                <div class="modal-body">
+                    Breed Unavailable
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="main">
         <div class="container">
+
             <div class="row">
                 <div class="col-sm">
                     <div class="jumbotron jumbotron-fluid">
                         <div class="container header">
-                            <h1 class="display-4">Dog Finder Web App</h1>
-                            <p class="lead">Welcome to Dog Finder!<br>You're moments away from finding your best friend!
+                            <h1 class="display-4">Doggie Finder</h1>
+                            <p class="lead">
+                                Welcome to Doggie Finder Web App!
+                                <br>
+                                You're moments away from finding your best friend!
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row mainSearch">
-                <div class="col-sm">
-                    <div class="searchContainer">
-                        <h2>
-                            <i class="fas fa-paw"></i>
-                            <span>Search by Dog Breed</span>
-                        </h2>
-                        <form>
-                            <div class="form-group searchBar">
-                                <input type="text" class="form-control" id="userInput" name = "userInput" placeholder="TYPE DOG BREED">
-                                <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-sm">
-                    <div class="footer">
-                        <p>
-                            <small>Copyright &copy; 2019 Group-Name. All rights reserved.</small>
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="content">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm">
-                    <div class="results">
-
-
-                        <div class="imgContainer">
-                            <img src="" alt="" class="imgContainer">    
+                    <div class="contentContainer">
+                        <div class="searchContainer">
+                            <h2>
+                                <i class="fas fa-paw"></i>
+                                <span>Search by Breed</span>
+                            </h2>
+                            <form>
+                                <div class="form-group searchBar">
+                                    <input type="text" class="form-control" id="userInput" name="userInput" placeholder="dog breed">
+                                    <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
+                                </div>
+                            </form>
                         </div>
-
-
-
-
-                        <div class="breedInfo"></div>
-                       
+                        <div class="infoContainer">
+                            <div class="imgBox">
+                                <a title="click to enlarge" href="#img">
+                                    <img>
+                                </a>
+                            </div>
+                            <div class="dogInfo">
+                            </div>
+                        </div>
+                        <div id="img" class="preview">
+                            <img src="">
+                            <a href="#" class="close">⨯</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
-    </script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="assets/app.js">
 
-    </script>
+    <div class="footerContainer">
+        <footer>
+            <p>
+                Copyright &copy; 2019 Doggie Finder Group. All rights reserved.
+            </p>
+        </footer>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="assets/app.js"></script>
 </body>
 
 </html>
